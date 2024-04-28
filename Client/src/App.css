@@ -1,0 +1,449 @@
+.App {
+  text-align: center;
+}
+
+.input_button_styles{
+  border: 1px solid #c7c7cb;
+}
+
+.input_button_styles:focus{
+  border: 1px solid #2f2f31;
+}
+
+.red_button{
+  width:150px;
+  border: none !important;
+  border-radius: 5px !important;
+  background-color: #EE4737 !important;
+  padding:10px !important;
+  align-self: center !important;
+  color:#ffffff !important;
+
+}
+
+.red_button:hover{
+  background-color: #c66d65 !important;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2) !important;
+  cursor: pointer !important;
+
+}
+.login-page-parent-container{
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+}
+.cancel-button{
+  width: 150px;
+  height: fit-content;
+  border: 1px solid red !important;
+  border-radius: 5px !important;
+  background:none !important;
+  padding: 10px !important;
+  align-self: center !important;
+  color: #ff0000 !important;
+}
+.cancel-button:hover {
+  color: white;
+  
+  box-shadow: 0 0 5px #54504f !important;
+  background-color: #c96e53;
+}
+.parent-container{
+  display: flex;
+  justify-content: center;
+}
+.login_page_container{
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+}
+.login_page_container .input_button_styles {
+  width:450px;
+  border:none;
+  
+}
+
+.login_page_container .input_button_styles>input{
+  width:100%;
+  min-height:32px;
+}
+.login_page_container .input_button_styles>input:focus{
+  outline: none;
+}
+.login_page_container .input_button_styles>input::placeholder{
+  max-width: 100%;
+  
+}
+
+.layout-parent-container{
+  margin-top:100px;
+  min-width: 700px;
+  min-height: 400px;
+  display: flex;
+  /* padding: 30px; */
+  align-items: center;
+  /* border: 1px solid #b3aeae; */
+  border-radius: 7px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.layout-left-container{
+  height:78%;
+  display: flex;
+  background-color: #e4990e;
+  flex: 0 0 40%;
+}
+.layout-left-section {
+  margin-left: 50px;
+}
+
+.layout-right-container{
+  flex: 0 0 60%;
+}
+.layout-left-container>div{
+  align-self: center;
+  padding:10px;
+}
+.left-layout-heading{
+  color:white;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin: 0px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding-bottom: 10px;
+}
+.left-layout-bottom-heading{
+  color:white;
+  font-size: 16px;
+  margin:0px;
+}
+
+.link-styles{
+  cursor: pointer;
+  color:rgb(54, 190, 34);
+  margin:0px;
+}
+.header {
+  text-align: center;
+  padding-top: 20px;
+  color: cadetblue;
+  background-color: black;
+  border-color: white;
+  border: 77px;
+  padding-bottom: 10px;
+}
+.bottom-header{
+  width:100%;
+  display: flex;
+  gap:10px;
+}
+
+.right-aligned-modal {
+ 
+  max-height: 80%;
+  /* height: 80%; */
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: scroll;
+}
+.modal-container{
+  overflow: auto;
+  padding:30px;
+  height:calc(700px)
+}
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.experience-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.footer-grid{
+  display:flex;
+}
+.close-mark {
+  display:flex;
+  width: 20px;
+  height: 20px;
+  
+  /* Add any other styles you need */
+
+  /* Apply a transition for smooth animation */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate the element when hovering over it */
+.close-mark:hover {
+  color: red;
+  transform: rotate(90deg);
+}
+/* DataTable.css */
+
+.data-table-container {
+  border-radius: 10px;
+  overflow: hidden;
+  margin:0px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd; /* Add border to the entire table */
+}
+
+.header-row {
+  background-color: black;
+  color: white;
+}
+
+.data-row {
+  border-bottom: 1px solid #ddd;
+  padding: 10px; /* Add 10px padding to each row */
+}
+
+.data-row:last-child {
+  border-bottom: none;
+}
+
+.data-row:hover {
+  background-color: #f5f5f5;
+}
+.data-row>td{
+  padding:10px;
+}
+
+.header-row>th{
+  padding:10px;
+}
+
+/* .dashboard-page{
+  padding:30px;
+  margin-top:60px;
+} */
+.pagination-container{
+  display:flex;
+  justify-content: center;
+  gap:40px;
+}
+
+.backgroundCanvas {
+  background-color: #282c34;
+  min-height: 10vh;
+}
+
+/* .header {
+  text-align: center;
+  border: 4px solid #F7EBD4;
+  background-color: #559E54;
+  color: #0A3409;
+  font-size: 20px;
+  letter-spacing: 3px;  
+  padding:10px;
+} */
+
+.navigation {
+  background-color: #F7EBD4;
+  min-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+}
+
+.nav-left {
+  display: flex;
+  justify-content: flex-start;
+  flex: auto;
+}
+
+.nav-left-button {
+  font-size: 20px;
+  margin: 10px;
+  border: none;
+  background-color: #F7EBD4;
+  color: #0A3409;
+  font-weight: bolder;
+}
+
+.nav-left-button:hover {
+  position: relative;
+  top:-2px;
+  color: #096e07;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  flex: auto;
+}
+
+.nav-right-button {
+  font-size: 20px;
+  margin: 10px;
+  border: none;
+  background-color: #F7EBD4;
+  color: #0A3409;
+  font-weight: bolder;
+}
+
+.nav-right-button:hover {
+  position: relative;
+  top:-2px;
+  color: #096e07;
+}
+
+.mainSection {
+  min-height: 10vh;
+  border: 10px solid transparent;
+}
+
+.internalSection {
+  /* background-color: floralwhite; */
+  min-height: 10vh;
+  border: 20px solid transparent;
+}
+
+.product-card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer {
+  font-size: 18px;
+  padding-bottom: 10px;
+  color:white;
+  text-align: center;
+}
+
+.filterProducts {
+  background-color: hsl(274, 47%, 70%);
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.filterProducts h3 {
+  margin: unset;
+}
+
+.filterButtons button {
+  font-size: 15px;
+  margin: 3px;
+}
+
+.formSection {
+  width: 400px;
+  position: relative;
+  left: 34%;
+  text-align: center;
+  border: 4px solid #F7EBD4;
+  background-color: #559E54;
+  color: #0A3409;
+  font-size: 20px;
+  letter-spacing: 3px; 
+  padding: 10px;
+}
+
+.outputLine {
+  color: rgb(0, 247, 255);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #333333; /* Light Gray */
+  margin: 0;
+  padding: 0;
+}
+.header {
+  text-align: center;
+  padding-top: 20px;
+  color: cadetblue;
+  background-color: black;
+  border-color: white;
+  border: 77px;
+  padding-bottom: 10px;
+}
+.main-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  height: -webkit-fill-available;
+}
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/background.jpg');
+  background-size: cover;
+  filter: blur(4px);
+  z-index: -1;
+}
+.container {
+  top: 60px;
+  position: relative;
+  /* max-width: 600px; */
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10px;
+  z-index: 1;
+}
+.lead {
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+.btn {
+  margin-top: 20px;
+}
+.info-text {
+  color: #333333; /* Dark Gray */
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.card-header {
+  text-align: center;
+  padding-top: 20px;
+  color: aqua;
+  background-color: black !important;
+  border-color: white;
+  border: 77px;
+  padding-bottom: 10px;
+}
+.card-container {
+  color: aquamarine;
+  max-height: 125px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.square-modal {
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 10px; /* Rounded corners */
+}
+
+.square-modal .modal-content {
+  padding: 20px; /* Add padding */
+}
+
+.square-modal .input, .square-modal {
+  text-align: center; /* Center align input and list */
+  margin-left: 30%;
+}
+
+.square-modal .list {
+  margin-top: 20px; /* Add margin to list */
+}
