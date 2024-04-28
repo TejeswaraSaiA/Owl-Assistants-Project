@@ -1,11 +1,11 @@
 import React, { useState,useEffect } from 'react';
-import { Form, Checkbox, Input, Button, Modal, Icon, Grid } from 'semantic-ui-react';
+import {  Checkbox,  Button, Modal, Icon } from 'semantic-ui-react';
 import DataTable from '../DataTable';
 import { toast } from 'react-toastify';
 import UserProfile from './UserProfile';
 import { useDispatch, useSelector } from 'react-redux'
-import {getCourse} from '../actions/course_action'
-import {createApplication,updateApplication,getApplications} from '../actions/application_actions'
+
+import {updateApplication,getApplications} from '../actions/application_actions'
 const AppliedUser = (props) => {
   const dispatch=useDispatch();
     const [onViewUser,setViewUser]=useState(false);
@@ -14,7 +14,7 @@ const AppliedUser = (props) => {
     //const {applications}=useSelector((state)=>state.getAllApplicationReducer)
     useEffect(()=>{
       dispatch(getApplications());
-    },[])
+    })
     const {applications}=useSelector((state)=>state.getAllApplicationReducer)
     useEffect(()=>{
     let appliedUsers = []
@@ -28,8 +28,8 @@ const AppliedUser = (props) => {
       // appliedUsers=
     }
     setAppliedUsers(appliedUsers)
-    // console.log("appp",appliedUsers)
-    },applications)
+    // eslint-disable-next-line
+    },[applications])
     // console.log("Applicationss",applications)
     const appliedUsersColumns=[
     { Header: 'SNO', accessor: '_id',},
