@@ -1,13 +1,14 @@
 
 
 import React,{useState,useEffect} from 'react';
-
+import { Table } from 'semantic-ui-react';
 import DataTable from '../DataTable';
 import AppliedUser from './AppliedUser';
 import AddJob from './AddJob';
 import { useDispatch, useSelector } from "react-redux";
-import {getCourse} from '../actions/course_action'
+import {registerCourse,getCourse} from '../actions/course_action'
 import { useNavigate } from 'react-router-dom';
+import moment from 'moment';
 import AddUsers from './AddUsers';
 
 const AdminDashboard = () => {
@@ -26,7 +27,6 @@ const AdminDashboard = () => {
   const [name, setName] = useState("")
 
   useEffect(()=>{
-    // eslint-disable-next-line
     currentUser=JSON.parse(localStorage.currentUser)
     setName(currentUser.name)
     dispatch(getCourse());
@@ -40,7 +40,7 @@ const AdminDashboard = () => {
         taSettledCoursesData.push(courses[i]) 
       }
       else{
-        if(courses[i].applicants.length !== 0 && !courses[i].admin_selected) {
+        if(courses[i].applicants.length != 0 && !courses[i].admin_selected) {
           deadlinePassedData.push(courses[i])
         }
         else {
@@ -91,7 +91,6 @@ const AdminDashboard = () => {
   ];
 
   // Row click handler function
-  // eslint-disable-next-line
   const handleRowClick = (rowData) => {
     // Customize this function to perform actions when a row is clicked
     console.log('Row clicked:', rowData);
@@ -102,7 +101,7 @@ const AdminDashboard = () => {
     setAppliedUser(false);
     setOpendCourse({})
   }
-  // eslint-disable-next-line
+
   const addNewJobHandler=()=>{
     // console.log("heree")
     setNewJob(true)
@@ -169,4 +168,3 @@ const AdminDashboard = () => {
 };
 
 export default AdminDashboard;
-

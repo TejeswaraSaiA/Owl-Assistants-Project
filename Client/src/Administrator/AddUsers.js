@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
-import { Form, Input, Button, Modal, Grid,Dropdown } from 'semantic-ui-react';
+import { Form, Checkbox, Input, Button, Modal, Icon, Grid,Dropdown } from 'semantic-ui-react';
 import { toast } from 'react-toastify';
 import axios from 'axios';
-
+import { useDispatch, useSelector } from 'react-redux'
+import {registerCourse,getCourse} from '../actions/course_action'
 
 const AddUsers = (props) => {
-  // eslint-disable-next-line
   const [course, setCourse] = useState({
     course_name:"",
     description:"",
     department:"",
     professor_name:""
   });
+  const dispatch = useDispatch()
   const [userType,setUserType] = useState('TA Applicant')
   const [name,setName]=useState("");
   const [password,setPassword]=useState("")
   const [email,setEmail]=useState("")
   const [department,setDepartment]=useState("Computer Science")
-  // eslint-disable-next-line
+
   const [data, setData] = useState({
     userType: userType,
     name: name,
