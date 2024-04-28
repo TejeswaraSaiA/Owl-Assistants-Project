@@ -1,8 +1,10 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import { Form, Checkbox, Input, Button, Modal, Icon, Grid } from 'semantic-ui-react';
 import { toast } from 'react-toastify';
-import { useDispatch, useSelector } from 'react-redux'
-import {createApplication,updateApplication,getApplications} from '../actions/application_actions'
+import { useDispatch } from 'react-redux'
+import {createApplication} from '../actions/application_actions'
+
+// eslint-disable-next-line
 const _ = require('lodash');
 const NewApplication = (props) => {
   const dispatch = useDispatch();
@@ -59,37 +61,25 @@ console.log("current user",currentUser)
   };
 
   const submitHandler = async() => {
-    const date=new Date();
     console.log("resume",state.resume)
     try{
-      // let finalApplication={
-      //   course_name: props.course_details && props.course_details.course_name ? props.course_details.course_name : "",
-      //   course_id : props.course_details && props.course_details._id ? props.course_details._id : "",
-      //   gpa : state.gpa,
-      //   previous_experience : state.experiences,
-      //   applicant_id : currentUser && currentUser._id ? currentUser._id : "",
-      //   department : state.major,
-      //   description : props.course_details && props.course_details.description ? props.course_details.description : "",
-      //   professor_name : props.course_details && props.course_details.professor_name ? props.course_details.professor_name : "",
-      //   applicant_name : state.name,
-      //   resume: state.resume && Math.floor(Math.random() * 9000) + 1000 + state.resume.name 
-      // }
       let formData = new FormData();
 
-    formData.append("course_name", props.course_details?.course_name || "");
-    formData.append("course_id", props.course_details?._id || "");
-    formData.append("gpa", state.gpa || "");
-    formData.append("previous_experience", JSON.stringify(state.experiences) || "");
-    formData.append("applicant_id", currentUser?._id || "");
-    formData.append("department", state.major || "");
-    formData.append("description", props.course_details?.description || "");
-    formData.append("professor_name", props.course_details?.professor_name || "");
-    formData.append("applicant_name", state.name || "");
-    formData.append("resume", state.resume);  // Make sure state.resume is a File object
+      formData.append("course_name", props.course_details?.course_name || "");
+      formData.append("course_id", props.course_details?._id || "");
+      formData.append("gpa", state.gpa || "");
+      formData.append("previous_experience", JSON.stringify(state.experiences) || "");
+      formData.append("applicant_id", currentUser?._id || "");
+      formData.append("department", state.major || "");
+      formData.append("description", props.course_details?.description || "");
+      formData.append("professor_name", props.course_details?.professor_name || "");
+      formData.append("applicant_name", state.name || "");
+      formData.append("resume", state.resume);  // Make sure state.resume is a File object
 
-    const response = await dispatch(createApplication(formData));
-      toast.success('Applied Succefully');
-      props.onClose();
+      // eslint-disable-next-line
+      const response = await dispatch(createApplication(formData));
+        toast.success('Applied Succefully');
+        props.onClose();
     }
     catch(e){
       toast.error("Something went Wrong")
@@ -283,9 +273,9 @@ console.log("current user",currentUser)
       <Modal.Actions style={{display:'flex',padding:"17px 30px"}}>
       
         
-            <Button onClick={() => props.onClose()} className='cancel-button'>cancel</Button>
+            <Button onClick={() => props.onClose()} className='cancel-button'>Cancel</Button>
        
-            <Button onClick={submitHandler} className='red_button' style={{marginLeft:"auto"}}>submit</Button>
+            <Button onClick={submitHandler} className='red_button' style={{marginLeft:"auto"}}>Submit</Button>
        
       </Modal.Actions>
       
