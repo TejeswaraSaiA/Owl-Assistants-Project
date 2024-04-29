@@ -53,7 +53,7 @@ const TACommittee = () => {
     { Header: 'Professor', accessor: 'professor_name' },
     {Header:'Actions',Cell: ({ row }) => (
       <div>
-        <button className='cancel-button' onClick={()=>{onOpenTaApplicants(row.original)}}>open</button>
+        <button className='cancel-button' onClick={()=>{onOpenTaApplicants(row.original)}}>Open</button>
       </div>
     ),
   }
