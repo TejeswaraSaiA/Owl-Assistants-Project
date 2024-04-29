@@ -39,6 +39,9 @@ const AppliedUser = (props) => {
     { Header: 'Accept', Cell: ({ row }) => (
         <Checkbox toggle onChange={()=>checkBoxClickHandler(row.original)} />
       ), },
+      { Header: 'Reject', Cell: ({ row }) => (
+        <Checkbox toggle onChange={()=>checkBoxClickHandler(row.original)} />
+      ), },
    
     ]
     // let appliedUsers = []
